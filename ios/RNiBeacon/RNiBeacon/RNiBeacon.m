@@ -7,15 +7,24 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
-#if __has_include("RCTEventEmitter.h")
+#if __has_include("RCTBridge.h")
 #import "RCTBridge.h"
-#import "RCTConvert.h"
-#import "RCTEventDispatcher.h"
 #else
 #import <React/RCTBridge.h>
+#endif
+
+#if __has_include("RCTConvert.h")
+#import "RCTConvert.h"
+#else
 #import <React/RCTConvert.h>
+#endif
+
+#if __has_include("RCTEventDispatcher.h")
+#import "RCTEventDispatcher.h"
+#else
 #import <React/RCTEventDispatcher.h>
 #endif
+
 #import "ESSBeaconScanner.h"
 #import "ESSEddystone.h"
 
